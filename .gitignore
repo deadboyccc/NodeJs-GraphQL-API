@@ -1,0 +1,14 @@
+
+node_modules/
+
+.env
+
+**/.env
+
+dist/
+
+coverage/
+
+*.log
+
+npm-debug.log*

@@ -1,0 +1,42 @@
+{
+  "name": "nodets",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "ts-node ./src/server.ts",
+    "nodemon": "nodemon ./src/server.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@eslint/js": "^9.18.0",
+    "@faker-js/faker": "^9.4.0",
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.10.7",
+    "eslint": "^9.18.0",
+    "eslint-config-prettier": "^10.0.1",
+    "eslint-plugin-prettier": "^5.2.2",
+    "express": "^4.21.2",
+    "globals": "^15.14.0",
+    "nodemon": "^3.1.9",
+    "prettier": "^3.4.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.3",
+    "typescript-eslint": "^8.20.0"
+  },
+  "dependencies": {
+    "@types/bcryptjs": "^2.4.6",
+    "@types/jsonwebtoken": "^9.0.7",
+    "@types/validator": "^13.12.2",
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^16.4.7",
+    "graphql": "^16.10.0",
+    "graphql-http": "^1.22.4",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.9.5",
+    "validator": "^13.12.0"
+  }
+}

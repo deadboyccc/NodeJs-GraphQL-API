@@ -1,0 +1,36 @@
+# Types & Input Types :)
+input UserInput {
+  name: String!
+  email: String!
+  password: String!
+  passwordConfirm: String!
+}
+type authData {
+  id: String!
+  token: String!
+}
+
+type User {
+  _id: ID!
+  name: String!
+  email: String!
+  password: String!
+}
+
+# CRUD
+# Root Mutation type
+
+# Root Query type
+type RootQuery {
+  users: [User!]!
+  login(email: String!, password: String!): authData
+}
+
+type RootMutation {
+  createUser(input: UserInput!): User!
+}
+
+schema {
+  mutation: RootMutation
+  query: RootQuery
+}
