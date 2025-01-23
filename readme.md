@@ -1,31 +1,38 @@
-# NodeTS Project
+# NodeJs-GraphQL Project
 
-This is a simple `Node.js Starter` using TypeScript.
+## Overview
+
+This project is a simple Node.js application designed to experiment with GraphQL API designs. It is not intended for production use but rather serves as a learning and experimentation platform.
+
+## Features
+
+- **GraphQL API**: Implemented using Apollo Server and GraphQL.
+- **User Authentication**: Basic user authentication with JWT.
+- **MongoDB Integration**: Uses Mongoose for MongoDB interactions.
+- **TypeScript**: Written in TypeScript for type safety and better development experience.
+- **Validation**: Input validation using `validator` library.
+- **Environment Configuration**: Managed using `dotenv`.
 
 ## Project Structure
 
-- `.vscode/launch.json`: Configuration for debugging with VSCode.
-- `.vscode/tasks.json`: Configuration for TypeScript tasks in VSCode.
-- `.gitignore`: Specifies files and directories to be ignored by Git.
-- `.prettierrc`: Configuration for Prettier code formatter.
-- `src/index.ts`: Entry point of the application.
-- `eslint.config.mjs`: Configuration for ESLint.
-- `tsconfig.json`: TypeScript compiler options.
-- `package.json`: Project metadata and dependencies.
+- **src/graphql**: Contains GraphQL schema and resolvers.
+- **src/Models**: Mongoose models for MongoDB collections.
+- **src/utils**: Utility functions for database connection and validation.
+- **src/server.ts**: Entry point of the application.
 
 ## Getting Started
 
 ### Prerequisites
 
 - Node.js
-- npm
+- MongoDB
 
 ### Installation
 
 1. Clone the repository:
   ```sh
-  git clone <repository-url>
-  cd nodets
+  git clone https://github.com/yourusername/nodets-graphql.git
+  cd nodets-graphql
   ```
 
 2. Install dependencies:
@@ -33,28 +40,28 @@ This is a simple `Node.js Starter` using TypeScript.
   npm install
   ```
 
+3. Set up environment variables:
+  Create a `.env` file in the root directory and add your MongoDB URI:
+  ```env
+  MONGODB_URI=mongodb://127.0.0.1:27017/graphql
+  ```
+
 ### Running the Application
 
-To start the application:
+1. Start the server:
+  ```sh
+  npm start
+  ```
+
+2. The server will be running at `http://localhost:4000/graphql`.
+
+### Importing Test Data
+
+To import test data, run the following command:
 ```sh
-npm start
+ts-node src/utils/testData.ts --import
 ```
 
-To start the application with Nodemon for automatic restarts:
-```sh
-npm run nodemon
-```
+## Note
 
-### Development
-
-To watch for TypeScript changes and compile automatically:
-```sh
-npm run tsc:watch
-```
-
-### Linting
-
-To lint the code using ESLint:
-```sh
-npm run lint
-```
+This project is for learning and experimenting with GraphQL API designs. It is not intended for production use.
